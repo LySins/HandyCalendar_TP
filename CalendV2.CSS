@@ -1,0 +1,73 @@
+
+
+#calendarBig { /* весь календарь */ 
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-spacing: 200 1.5em;
+background-color: #4811C0
+}
+#calendarBig td {
+  vertical-align: top;
+}
+#calendarBig > thead td:not(:nth-child(2)) { /* предыдущий-следующий года */ 
+  text-decoration: underline;
+  color: #CBB3FF;
+  cursor: pointer;
+}
+#calendarBig > thead td:not(:nth-child(2)):hover { /* если наведён курсор на предыдущий-следующий года */ 
+  color: #FFFFFF;
+}
+#calendarBig > thead td:nth-child(2) { /* текущий год */ 
+  font-size: 150%;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+#calendarBig, #calendarBig table {
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+}
+#calendarBig table { /* таблицы с месяцами выравнены по верхней границе, горизонтально — по центру */ 
+  display: inline-table;
+}
+#calendarBig table thead tr:nth-child(1) { /* названия месяцев */ 
+  font-size: 110%;
+  font-weight: 700;
+color: #FFFFFF;
+}
+#calendarBig table thead tr:last-child { /* название дней недели */ 
+  font-size: small;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+#calendarBig table tbody td { /* дни */ 
+  color: #FFFFFF;
+}
+#calendarBig table tbody td:nth-child(n+6), #calendarBig .holiday { /* выходные и праздники */ 
+  color: #B47CE4;
+  color: pink;
+}
+#calendarBig table tbody td.today { /* сегодня */ 
+  background: #FFFFFF;
+  outline: 2px solid red;
+  color: black;
+}
+#calendarBig table tbody td[title] { /* выделенные даты */ 
+  outline: 3px solid green;
+  background: green;
+  cursor: help;
+}
+#calendarBig table tbody td[title] a { /* выделенные даты-ссылки */ 
+  display: block;
+  text-decoration: none;
+  background: #ffb02e;
+  color: black;
+}
+#calendarBig table tbody td[title] a:hover { /* выделенные даты-ссылки под курсором */
+  background: #fde910;
+  color: black;
+}
+
+
