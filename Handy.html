@@ -83,9 +83,6 @@ body {
 	
 }
 
- button{
-        
-    }
 
 
 #zatemnenie {
@@ -132,9 +129,29 @@ body {
 .close:hover {background: #e6e6ff;}
 
 ba{
-  	 color:#009900;
-	
-       
+  	 color:#009900;     
+}
+.buttonSTL1 {
+  border: 3px solid green;
+  color: black;
+  font-size: 14pt;
+  cursor: pointer;
+  position: relative;
+  width: 180px;
+  height: 25px;
+  top: 100px;
+  left:0%;
+}
+.buttonSTL2 {
+  border: 3px solid yellow;
+  color: black;
+  font-size: 14pt;
+  cursor: pointer;
+  position: relative;
+  width: 180px;
+  height: 25px;
+  top: 100px;
+  left:0%;
 }
 </style>
 
@@ -177,24 +194,27 @@ ba{
     <alt="" style="vertical-align:middle"> 
     Создать событие
    </button>
+   <button onclick="buttClick2()" id="TempButt" class="buttonSTL1">THIS IS BUTT</button>
 </form>
-
 <script>
   function buttClick1(){
     alert(document.getElementById('InputStroke').value);
     var mDate = new Date();
     mDate = document.getElementById('date').value;
-    alert(mDate.getMonth());
-    var div1 = document.getElementById('calendarTable');
-    var stl = div1[0].style;
-    div1.className = "close";
-    document.getElementById('calendarTable');
+    if (mDate !=0){
+      alert(mDate);
+    }
+  }
+  function buttClick2(){
+    var tmp1 = document.getElementById('TempButt');
+    tmp1.className = "buttonSTL2";
+    
+
   }
 </script>
 
       </div>
     </div>
-     
     <a href="#zatemnenie"> <button style="
 	position: absolute;
         width: 200px;
@@ -321,7 +341,7 @@ ba{
   <div data-dd="4" data-mm="7" data-text="День рождения у Пучкова Ильи"></div>
   <div data-dd="14" data-mm="6" data-text="День рождения у Чернышёва Ильи"></div>
 <div data-dd="30" data-mm="5" data-text="День рождения у Власова Александра"></div>
-  <div data-dd="28" data-mm="7" data-yyyy="2022" data-text="Концерт Газманова в Киеве" data-link="https://memepedia.ru/koncert-gazmanova/"></div>
+  <div id="div1" data-dd="28" data-mm="7" data-yyyy="2022" data-text="Концерт Газманова в Киеве" data-link="https://memepedia.ru/koncert-gazmanova/"></div>
 <div data-dd="9" data-mm="1" data-yyyy="2002" data-text="Концерт Группы КиШ в Томске"></div>
 </div>
 </body>
