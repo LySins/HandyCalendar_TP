@@ -54,21 +54,25 @@ color: #FFFFFF;
   background: #FFFFFF;
   outline: 2px solid red;
   color: black;
+  border-radius: 5px;
 }
 #calendarBig table tbody td[title] { /* выделенные даты */ 
-  outline: 2px solid green;
+  
   background: green;
   cursor: help;
+  border-radius: 5px;
 }
 #calendarBig table tbody td[title] a { /* выделенные даты-ссылки */ 
   display: block;
   text-decoration: none;
   background: #ffb02e;
   color: black;
+  border-radius: 5px;
 }
 #calendarBig table tbody td[title] a:hover { /* выделенные даты-ссылки под курсором */
   background: #fde910;
   color: black;
+  border-radius: 5px;
 }
 
 h1{
@@ -189,8 +193,7 @@ ba{
 
             <script>
                 function buttClick1() {
-                    //var EventMessege = document.getElementById('InputStroke').value);
-                    document.getElementById('div1').setAttribute('data-text',);
+                    //document.getElementById('div1').setAttribute('data-text',);
                     alert(document.getElementById('div1').getAttribute('data-text'));
                 }
             </script>
@@ -228,15 +231,15 @@ ba{
     <script>
         function ChangeBack() {
             if (document.body.classList.contains('themeBody1')) {
-                document.body.classList.remove('themeBody1');
+                //document.body.classList.remove('themeBody1');
                 document.body.classList.add('themeBody2');
             }
             else if (document.body.classList.contains('themeBody2')) {
-                document.body.classList.remove('themeBody2');
+                //document.body.classList.remove('themeBody2');
                 document.body.classList.add('themeBody3');
             }
             else if (document.body.classList.contains('themeBody3')) {
-                document.body.classList.remove('themeBody3');
+                //document.body.classList.remove('themeBody3');
                 document.body.classList.add('themeBody1');
             }
             else  {
@@ -252,7 +255,7 @@ ba{
         width: 180px;
         height: 50px;
         top: 100px;
-        left: 1100px;
+        left: 1500px;
 	    border-radius: 50px;
 	    background-color: yellow
         ">
