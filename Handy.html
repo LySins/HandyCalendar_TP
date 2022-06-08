@@ -54,21 +54,25 @@ color: #FFFFFF;
   background: #FFFFFF;
   outline: 2px solid red;
   color: black;
+border-radius: 5px;
 }
 #calendarBig table tbody td[title] { /* выделенные даты */ 
-  outline: 2px solid green;
+  
   background: green;
   cursor: help;
+border-radius: 5px;
 }
 #calendarBig table tbody td[title] a { /* выделенные даты-ссылки */ 
   display: block;
   text-decoration: none;
   background: #ffb02e;
   color: black;
+border-radius: 5px;
 }
 #calendarBig table tbody td[title] a:hover { /* выделенные даты-ссылки под курсором */
   background: #fde910;
   color: black;
+border-radius: 5px;
 }
 
 h1{
@@ -79,9 +83,17 @@ text-align:center
 
 }
 body {
-    background-color:#FFC8A8;
-	
+    background: url(https://sun9-31.userapi.com/s/v1/if2/UzvgX-6CH7rEIbIU7em4qtqxCLnWoiyoXK7SIkvjccwMXSKKrNtf0sMmMs4iE6YYPK_n2VrKW9d7w0u6OulfTduC.jpg?size=1920x1080&quality=96&type=album)	
 }
+    .themeBody1 {
+        background: url(https://images-ext-1.discordapp.net/external/2TA3aCrXYAXZTl6aUwMyXESI1CzDWBssSRrg7AnyYvM/https/catherineasquithgallery.com/uploads/posts/2021-03/1614610387_167-p-zadnii-fon-dlya-fotoshopa-238.jpg?width=878&height=585)
+    }
+    .themeBody2 {
+        background: url(https://sun9-31.userapi.com/s/v1/if2/UzvgX-6CH7rEIbIU7em4qtqxCLnWoiyoXK7SIkvjccwMXSKKrNtf0sMmMs4iE6YYPK_n2VrKW9d7w0u6OulfTduC.jpg?size=1920x1080&quality=96&type=album)
+    }
+    .themeBody3 {
+        background: url(https://phonoteka.org/uploads/posts/2021-06/1624463361_15-phonoteka_org-p-oboi-na-rabochii-stol-anime-fioletovii-kra-17.jpg);
+    }
 
  button{
         
@@ -145,180 +157,211 @@ ba{
 <title> HandyCalendar</title>
 </head>
 
-<body background="fon.jpg">
+<body>
 
-<h1 id = "Hige">HandyCalendar</h1>
- 
-<div id="zatemnenie">
-      <div id="okno">
-        Новое событие<br>
+    <h1 id="Hige">HandyCalendar</h1>
 
-<input  id = "InputStroke" type="text" size="40" placeholder="Введите событие сюда." >
-<input id="date" type="date" value="">
+    <div id="zatemnenie">
+        <div id="okno">
+            Новое событие<br>
+
+            <input id="InputStroke" type="text" size="40" placeholder="Введите событие сюда.">
+            <input id="date" type="date" value="">
 
 
 
-<a href="#" class="close">Отмена</a>
+            <a href="#" class="close">Отмена</a>
 
-<form>
-<button onclick="buttClick1()" style="position: absolute;
+            <form>
+                <button onclick="buttClick1()" style="position: absolute;
         border: 1px solid green;
         color: green;
-	background: #f2f2f2;
+	    background: #f2f2f2;
         text-decoration: none;
         font-size: 14pt;
         cursor:pointer;
-	position: absolute;
+	    position: absolute;
         width: 220px;
         height: 40px;
         top: 72px;
         left: 100px;">
 
-    <alt="" style="vertical-align:middle"> 
-    Создать событие
-   </button>
-</form>
+                    <alt ="" style="vertical-align:middle">
+                        Создать событие
+                </button>
+            </form>
 
-<script>
-  function buttClick1(){
-    alert(document.getElementById('InputStroke').value);
-    var mDate = new Date();
-    mDate = document.getElementById('date').value;
-    alert(mDate.getMonth());
-    var div1 = document.getElementById('calendarTable');
-    var stl = div1[0].style;
-    div1.className = "close";
-    document.getElementById('calendarTable');
-  }
-</script>
+            <script>
+                function buttClick1() {
+                    //var EventMessege = document.getElementById('InputStroke').value);
+                    document.getElementById('div1').setAttribute('data-text',);
+                    alert(document.getElementById('div1').getAttribute('data-text'));
+                }
+            </script>
 
-      </div>
+        </div>
     </div>
-     
-    <a href="#zatemnenie"> <button style="
+
+    <a href="#zatemnenie">
+        <button style="
 	position: absolute;
-        width: 200px;
-        height: 100px;
-        top: 500px;
+        width: 180px;
+        height: 50px;
+        top: 170px;
         left: 200px;
 	border-radius: 50px;
 	background-color: #CEFFA8
 ">
-    <alt="Кликните, чтобы создать событие" style="vertical-align:middle"> 
-    Создать событие
-   </button></a>
+            <alt ="Кликните, чтобы создать событие" style="vertical-align:middle">
+                Создать событие
+        </button>
+    </a>
 
-<form action="Autorization.html">
-<button style="position: absolute;
+    <form action="Autorization.html">
+        <button style="position: absolute;
         width: 180px;
         height: 50px;
         top: 100px;
         left: 200px;
-	border-radius: 50px;
-	background-color: pink">
-    <alt="" style="vertical-align:middle"> 
-    Выйти
-   </button>
-</form>
+	    border-radius: 50px;
+	    background-color: pink">
+            <alt ="" style="vertical-align:middle">
+                Выйти
+        </button>
+    </form>
+    <script>
+        function ChangeBack() {
+            if (document.body.classList.contains('themeBody1')) {
+               document.body.classList.remove('themeBody1');
+                document.body.classList.add('themeBody2');
+            }
+            else if (document.body.classList.contains('themeBody2')) {
+                document.body.classList.remove('themeBody2');
+                document.body.classList.add('themeBody3');
+            }
+            else if (document.body.classList.contains('themeBody3')) {
+                document.body.classList.remove('themeBody3');
+                document.body.classList.add('themeBody1');
+            }
+            else  {
+                document.body.classList.add('themeBody1');
+            }
 
-<table id="calendarBig">
- <thead>
-  <tr><td><td><td>
- <tbody>
-  <tr>
-    <td>
-      <table data-m="0">
+            
+        }
+    </script>
+    <form >
+        <button onclick="ChangeBack()" style=
+        "position: absolute;
+        width: 180px;
+        height: 50px;
+        top: 100px;
+        left: 1300px;
+	    border-radius: 50px;
+	    background-color: yellow
+        ">
+        <alt ="" style="vertical-align:middle">
+              Сменить фон
+        </button>
+    </form>
+
+    <table id="calendarBig">
         <thead>
-          <tr><td colspan="7">Январь
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+            <tr><td><td><td>
         <tbody>
-      </table>
-    <td>
-      <table data-m="1">
-        <thead>
-          <tr><td colspan="7">Февраль
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-    <td>
-      <table data-m="2">
-        <thead>
-          <tr><td colspan="7">Март
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-  <tr>
-    <td>
-      <table data-m="3">
-        <thead>
-          <tr><td colspan="7">Апрель
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-    <td>
-      <table data-m="4">
-        <thead>
-          <tr><td colspan="7">Май
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-    <td>
-      <table data-m="5">
-        <thead>
-          <tr><td colspan="7">Июнь
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-  <tr>
-    <td>
-      <table data-m="6">
-        <thead>
-          <tr><td colspan="7">Июль
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-    <td>
-      <table data-m="7">
-        <thead>
-          <tr><td colspan="7">Август
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-    <td>
-      <table data-m="8">
-        <thead>
-          <tr><td colspan="7">Сентябрь
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-  <tr>
-    <td>
-      <table data-m="9">
-        <thead>
-          <tr><td colspan="7">Октябрь
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-    <td>
-      <table data-m="10">
-        <thead>
-          <tr><td colspan="7">Ноябрь
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-    <td>
-      <table data-m="11">
-        <thead>
-          <tr><td colspan="7">Декабрь
-          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-        <tbody>
-      </table>
-</table>
+            <tr>
+                <td>
+                    <table data-m="0">
+                        <thead>
+                            <tr><td colspan="7">Январь
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+                <td>
+                    <table data-m="1">
+                        <thead>
+                            <tr><td colspan="7">Февраль
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+                <td>
+                    <table data-m="2">
+                        <thead>
+                            <tr><td colspan="7">Март
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+            <tr>
+                <td>
+                    <table data-m="3">
+                        <thead>
+                            <tr><td colspan="7">Апрель
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+                <td>
+                    <table data-m="4">
+                        <thead>
+                            <tr><td colspan="7">Май
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+                <td>
+                    <table data-m="5">
+                        <thead>
+                            <tr><td colspan="7">Июнь
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+            <tr>
+                <td>
+                    <table data-m="6">
+                        <thead>
+                            <tr><td colspan="7">Июль
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+                <td>
+                    <table data-m="7">
+                        <thead>
+                            <tr><td colspan="7">Август
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+                <td>
+                    <table data-m="8">
+                        <thead>
+                            <tr><td colspan="7">Сентябрь
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+            <tr>
+                <td>
+                    <table data-m="9">
+                        <thead>
+                            <tr><td colspan="7">Октябрь
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+                <td>
+                    <table data-m="10">
+                        <thead>
+                            <tr><td colspan="7">Ноябрь
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+                <td>
+                    <table data-m="11">
+                        <thead>
+                            <tr><td colspan="7">Декабрь
+                            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        <tbody>
+                    </table>
+    </table>
 </html>
 
-
 <div id="calendarTable">
-  <div data-dd="4" data-mm="7" data-text="День рождения у Пучкова Ильи"></div>
+  <div id ="div1" data-dd="4" data-mm="7" data-text=  ></div>
   <div data-dd="14" data-mm="6" data-text="День рождения у Чернышёва Ильи"></div>
 <div data-dd="30" data-mm="5" data-text="День рождения у Власова Александра"></div>
   <div data-dd="28" data-mm="7" data-yyyy="2022" data-text="Концерт Газманова в Киеве" data-link="https://memepedia.ru/koncert-gazmanova/"></div>
